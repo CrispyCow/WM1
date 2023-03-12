@@ -20,12 +20,18 @@
 #define SERVO1 9
 #define SERVO2 10
 
+// <GLOBAL DECLARATIONS>
 Servo firstServo;  // create servo object to control servos
 Servo secondServo; // two servo objects can be created using the functionallity available on the WM1
 
 int pos = 0;    // variable to store the servo position
 
-/* <EXAMPLE FUNCTIONALITY DESCRIPTION>
+/* <WIRING DESCRIPTION>                        
+  Standard 5V 180° RC servos are connected to WM1 servo header 'S1' and 'S2'
+  Ensure servo pinout matches that of the WM1 board
+*/
+
+/* <FUNCTIONALITY DESCRIPTION>
   This example code demonstrates how to use the servo headers built into the WM1 to control two
   standard 180° RC servos. This code is based on the standard arduino 'Sweep' example and will
   move both servos back and forth from 0° to 180°
@@ -35,12 +41,14 @@ void setup() {
   // put your setup code here, to run once:
 
   // <ASSIGN PINS TO THE SERVO OBJECTS>
+  // Used Pins 
   firstServo.attach(SERVO1);
   secondServo.attach(SERVO2);
 
   /* <CONFIGURE ALL REMAINING WM1 PINS AS OUTPUTS>
     while not all pins are used in this example it is good practice to 
-    configure unused pins them as outputs so that they are not left floating */    
+    configure unused pins them as outputs so that they are not left floating */ 
+  // Unused pins   
   pinMode(M1_PWM, OUTPUT);
   pinMode(M1_DIR, OUTPUT);
   pinMode(M2_PWM, OUTPUT);

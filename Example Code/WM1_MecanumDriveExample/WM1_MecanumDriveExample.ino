@@ -21,13 +21,13 @@
 #define duty 255  // motor duty cycle between 0-255
 #define wait 4000 // time delay between each action in ms
 
-/* <MOTOR ARRANGEMENTS>                        
+/* <WIRING DESCRIPTION>                        
 Front Left wired to M3  |  Front Right wired to M1
 ------------------------+-------------------------
 Back Left wired to M4   |  Back Right wired to M2
 */
 
-/* <EXAMPLE FUNCTIONALITY DESCRIPTION>
+/* <FUNCTIONALITY DESCRIPTION>
   This example code demonstrates how to use the WM1's 4 solid state motor drivers
   to control individual wheels of a mecanum wheeled rover. The code steps thorugh
   various basic maneuvers such as driving, strafing, and turning on the spot.
@@ -38,7 +38,8 @@ void setup() {
 
   /* <CONFIGURE ALL WM1 PINS AS OUTPUTS>
     while not all pins are used in this example it is good practice to 
-    configure them as outputs so that they are not left floating */    
+    configure them as outputs so that they are not left floating */   
+  // Used Pins   
   pinMode(M1_PWM, OUTPUT);
   pinMode(M1_DIR, OUTPUT);
   pinMode(M2_PWM, OUTPUT);
@@ -47,6 +48,7 @@ void setup() {
   pinMode(M3_DIR, OUTPUT);
   pinMode(M4_PWM, OUTPUT);
   pinMode(M4_DIR, OUTPUT);
+  // Unused pins
   pinMode(RELAY1, OUTPUT);
   pinMode(RELAY2, OUTPUT);
   pinMode(SERVO1, OUTPUT);
