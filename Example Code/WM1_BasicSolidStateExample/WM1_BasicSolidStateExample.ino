@@ -58,7 +58,7 @@ void loop() {
   // put your main code here, to run repeatedly:
 
   // DIR pin dictates motor's dirrection
-  // PWM pin dictates the motor's voltage, which loosley controls speed
+  // PWM pin dictates the motor's voltage, which loosely controls speed
 
   // <SET M1 DIRECTION TO FORWARDS>
   digitalWrite(M1_DIR, HIGH); 
